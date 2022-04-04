@@ -1,0 +1,14 @@
+gnome-terminal --window -x bash -c "ls; exec bash" 
+
+解决：Gtk-Message: Failed to load module &quot;canberra-gtk-module&quot;
+sudo apt-get install libcanberra-gtk-module
+
+日常记录
+我在Ubuntu18.04安装ROS以后，运行Gazebo竟然出现错误，Gazebo页面卡住黑屏，在终端出现Gazebo [Err] [REST.cc:205] Error in REST request 我去！！！ 这厮什么鬼？？ 不急。有解决办法的。
+
+解决方案
+  $  sudo gedit ~/.ignition/fuel/config.yaml
+
+     然后将  url : https://api.ignitionfuel.org   用 # 注释掉
+    添加 url: https://api.ignitionrobotics.org  
+
